@@ -1,0 +1,117 @@
+.homepage{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.homepage img{
+  width: 230px;
+  height: 320px;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.homepage .portfolio-image > div{
+  padding: 4rem 1.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  position: relative;
+}
+.border2{
+  padding: 0 2rem;
+  position: absolute;
+  border: 1px solid var(--secondary-color);
+  width: 300px;
+  border-radius: 5px;
+  height: 490px;
+  top: 5%;
+}
+.homepage span{
+  color: #A8A8A8;
+  font-size: 16px;
+}
+.homepage pre{
+  font-family: 'Azo Sans Bold';
+  font-size: 16px;
+}
+.homepage pre > span{
+  color: #0FD101;
+}
+.homepage h3{
+  font-size: 12px;
+  font-family: 'Azo Sans Bold';
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+}
+.homepage h3 > div{
+  border-radius: 50%;
+  background-color: #0FD101;
+  width: 12px;
+  height: 12px;
+  margin-right: .5rem;
+}
+.portfolio-description{
+  max-width: 500px;
+  margin: auto 4rem;
+}
+.portfolio-description h1{
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+.portfolio-description h1 h2{
+  font-size: 45px;
+  font-family: 'Azo Sans Bold';
+  text-decoration: underline;
+  margin: 0 .5rem;
+}
+.portfolio-description h1 span{
+  font-size: 35px;
+  font-family: 'Azo Sans Bold';
+  color: var(--secondary-color);
+}
+.portfolio-description > p{
+  margin: 1.5rem 0;
+}
+.action-button{
+  border: 2px solid var(--secondary-color);
+  border-radius: 25px;
+  font-family: 'Azo Sans Bold';
+  width: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 2rem 0;
+}
+.action-button > p{
+  padding: 0 2rem;
+}
+.action-button > span{
+  width: 50px;
+  height: 0;
+}
+.action-button > div{
+  position: absolute;
+  right: -1%;
+  border-radius: 50%;
+  height: 101%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action-button img{
+  width: 10px;
+  height: 16px;
+}
+.action-button:hover{
+  background-color: var(--secondary-color);
+  color: white;
+}

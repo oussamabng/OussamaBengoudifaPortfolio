@@ -14,8 +14,8 @@ body {
   margin: 0;
   font-family: 'Azo Sans';
   background-color: var(--primary-color);
+  color: var(--white-color);
 }
-
 .font-raleway{
   font-family: 'Raleway', sans-serif;
 }
@@ -51,10 +51,82 @@ body {
 .bg-grey{
   background-color: var(--grey-color);
 }
-
+.opacity-0{
+  opacity: 0;
+}
+.opacity-1{
+  opacity: 1;
+}
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.circular{
+  border-radius: 50%;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.items-center{
+  align-items: center;
+}
+.mt-10{
+  margin-top: 10rem;
+}
+.mx-4{
+  margin: auto 4rem;
+}
+@keyframes shape {
+  0% {
+    right: 400;
+  }
+  50% {
+    right: 0%;
+  }
+}
+@keyframes square {
+  0% {
+    right: 35%;
+  }
+  50% {
+    right: 50%;
+  }
+  100% {
+    right: 35%;
+  }
+}
+@keyframes square-turn {
+  0% {
+    right: 65%;
+    transform: rotate(0);
+  }
+  50% {
+    right: 60%;
+    transform: rotate(90deg);
+  }
+  100% {
+    right: 65%;
+    transform: rotate(180deg);
+  }
+}
+.shape{
+  animation: shape 20s linear infinite;
+  -webkit-animation: shape 20s linear infinite;
+}
+.square-turn{
+  animation: square-turn 20s linear infinite;
+-webkit-animation: square-turn 20s linear infinite;
+}
+.square{
+  animation: square 20s linear infinite;
+-webkit-animation: square 20s linear infinite;
+}
 /* App css */
 
 .portfolio{
-  position: relative;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }

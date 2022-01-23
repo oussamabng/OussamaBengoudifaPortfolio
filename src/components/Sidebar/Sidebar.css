@@ -1,0 +1,36 @@
+.Sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.Sidebar > span.active{
+  background-color: var(--secondary-color);
+}
+.Sidebar > span{
+  margin: 1rem 0;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.Sidebar > span:hover{
+  background-color: var(--secondary-color);
+}
+.Sidebar > span:hover svg path{
+  fill: white;
+}
+.Sidebar span svg{
+  width: 20px;
+  height: 20px;
+}
+.Sidebar span svg path{
+  fill: var(--secondary-color);
+
+}
+.Sidebar  span.active svg path{
+  fill: white;
+}
