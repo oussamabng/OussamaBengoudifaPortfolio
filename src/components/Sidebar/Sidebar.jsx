@@ -6,24 +6,23 @@ import {ReactComponent as Mail} from "../../assets/icons/mail.svg";
 import {ReactComponent as Star} from "../../assets/icons/star.svg";
 
 
-
-
-const Sidebar = ()=>{
+const Sidebar = (props)=>{
+  const {activeItem,setActiveItem} = props;
   return(
     <div className="Sidebar mx-4">
-      <span className="active">
+      <span onClick={()=>setActiveItem('home')} className={activeItem==='home'?'active':''}>
         <Home />
       </span>
-      <span>
+      <span onClick={()=>setActiveItem('user')} className={activeItem==='user'?'active':''}>
         <User />
       </span>
-      <span>
+      <span onClick={()=>setActiveItem('bag')} className={activeItem==='bag'?'active':''}>
         <Bag />
       </span>
-      <span>
+      <span onClick={()=>setActiveItem('mail')} className={activeItem==='mail'?'active':''}>
         <Mail />
       </span>
-      <span>
+      <span onClick={()=>setActiveItem('star')} className={activeItem==='star'?'active':''}>
         <Star />
       </span>
     </div>
