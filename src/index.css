@@ -1,13 +1,41 @@
+@import url("./assets/fonts/stylesheet.css");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Azo Sans';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ /* Variables */ 
+:root{
+  --primary-color:#1A1A1A;
+  --secondary-color:#FF9900;
+  --white-color:#FFFFFF;
+  --grey-color:#333333;
+}
+
+ /* Colors classes */ 
+.text-primary{
+  color: var(--primary-color);
+}
+.text-secondary{
+  color: var(--secondary-color);
+}
+.text-white{
+  color: var(--white-color);
+}
+.text-grey{
+  background-color: var(--grey-color);
+}
+
+ /* BackgroundColors classes */
+.bg-primary{
+  background-color: var(--primary-color);
+}
+.bg-secondary{
+  background-color: var(--secondary-color);
+}
+.bg-white{
+  background-color: var(--white-color);
+}
+.bg-grey{
+  background-color: var(--grey-color);
 }
