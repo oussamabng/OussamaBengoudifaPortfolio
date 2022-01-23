@@ -1,0 +1,31 @@
+.logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease;
+}
+.logo > p{
+  position: relative;
+  max-width: fit-content;
+  font-size: 128px;
+}
+.logo > p > span{
+  position: absolute;
+  min-width: 22px;
+  height: 22px;
+}
+.logo.move{
+  top: 0;
+  left: 0;
+  transform: translate(100%, 0%);
+}
+.logo.move > p {
+  font-size: 43px;
+}
+.logo.move > p > span {
+  min-width: 7px!important;
+  height: 7px!important;
+  top: -100%!important;
+  right: -110%!important;
+}

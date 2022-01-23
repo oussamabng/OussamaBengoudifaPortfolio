@@ -1,15 +1,27 @@
 @import url("./assets/fonts/stylesheet.css");
-body {
-  margin: 0;
-  font-family: 'Azo Sans';
-}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
  /* Variables */ 
-:root{
+ :root{
   --primary-color:#1A1A1A;
   --secondary-color:#FF9900;
   --white-color:#FFFFFF;
   --grey-color:#333333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Azo Sans';
+  background-color: var(--primary-color);
+}
+
+.font-raleway{
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-comfortoo{
+  font-family: 'Comfortaa', cursive;
 }
 
  /* Colors classes */ 
@@ -38,4 +50,11 @@ body {
 }
 .bg-grey{
   background-color: var(--grey-color);
+}
+
+/* App css */
+
+.portfolio{
+  position: relative;
+  height: 100vh;
 }
