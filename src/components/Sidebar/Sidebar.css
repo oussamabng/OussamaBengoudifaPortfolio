@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  position: fixed;
+  right: 5%;
+  top: 25%;
 }
 .Sidebar > span.active{
   background-color: var(--secondary-color);
@@ -35,4 +38,9 @@
 }
 .Sidebar  span.active svg path{
   fill: white;
+}
+@media only screen and (max-width: 1300px) {
+  .Sidebar{
+    right: 0;
+  }
 }

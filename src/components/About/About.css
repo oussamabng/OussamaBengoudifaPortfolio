@@ -1,0 +1,73 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about > div{
+  color: white;
+  position: relative;
+}
+.about > div > h1{
+  min-width: 300px;
+  font-size: 45px;
+  opacity: 0.1;
+  font-family: 'Azo Sans Black';
+  z-index: 20;
+}
+.about > div > h3 > span {
+  color: var(--secondary-color);
+}
+.about > div > h3 {
+  font-size: 25px;
+  opacity: 1!important;
+  font-family: 'Azo Sans Black';
+  position: absolute;
+  z-index: 90;
+  top: 40%;
+  right: 50%;
+  transform: translate(50%,-100%);
+}
+.personal{
+  font-size: 16px;
+  font-family: 'Azo Sans Md';
+}
+.personal > h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.personal span{
+  opacity: 50%;
+  margin-right: 1rem;
+}
+.personal .special-box{
+  border-radius: 5px;
+  border: 1px solid #585858;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  position: relative;
+}
+.personal .special-box h6 > div{
+  font-size: 39px;
+  padding-right: 3rem;
+}
+.personal .special-box h6{
+  display: flex;
+  font-size: 79px;
+  font-family: 'Azo Sans Bold';
+  color: var(--secondary-color);
+  margin: 0;
+}
+.personal .special-box > p{
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Azo Sans Md';
+}
+.personal .special-box > p > p{
+  margin: 0;
+}
+.about .action-button{
+  width: 30%;
+  font-size: 14px;
+}

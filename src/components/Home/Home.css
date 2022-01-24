@@ -34,6 +34,7 @@
 }
 .homepage pre > span{
   color: #0FD101;
+  margin: 0 .5rem;
 }
 .homepage h3{
   font-size: 12px;
@@ -54,7 +55,7 @@
 }
 .portfolio-description{
   max-width: 500px;
-  margin: auto 4rem;
+  margin: auto 2rem;
 }
 .portfolio-description h1{
   display: flex;

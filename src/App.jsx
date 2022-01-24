@@ -4,6 +4,7 @@ import Logo from "./components/Logo/Logo";
 import Shape from "./components/Shape/Shape";
 import Sidebar from "./components/Sidebar/Sidebar";
 import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 
 
 const App = ()=>{
@@ -34,9 +35,10 @@ const App = ()=>{
         </>
         )
        }
-        <div className="flex justify-between mt-10 items-center">
+        <div className="mt-10 mw">
           { activeItem === 'home' && <Home /> }
           { activeItem === 'user' && <About /> }
+          { activeItem === 'user' && <Skills /> }
           <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
       </div>

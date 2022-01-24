@@ -1,8 +1,13 @@
 import "./Home.css";
 import Picture from "../../assets/portfolio.jpeg";
 import V from "../../assets/icons/v.svg";
+import Typed from "react-typed";
 
 const Home = ()=>{
+  const textLines = [
+    `Full stack developer`,
+    `IT software engineer`
+  ]
   const handleGetCv = ()=>{};
   return(
     <div className="homepage">
@@ -11,7 +16,17 @@ const Home = ()=>{
           <div className="border2"></div>
           <img src={Picture} alt="oussama bengoudifa" />
           <span>Hi there ! I am</span>
-          <pre><span>[</span>         Full stack developer        <span>]</span></pre>
+          <pre>
+          <span>
+          [</span>         
+          <Typed strings={textLines} typeSpeed={60}
+          backSpeed={0}
+          fadeOut={true}
+          loop={true} 
+          />        
+          <span>]
+          </span>
+          </pre>
         </div>
         <h3> <div></div> I’m available for a freelance job. Hire me</h3>
       </div>

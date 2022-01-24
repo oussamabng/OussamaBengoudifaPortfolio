@@ -1,0 +1,8 @@
+.skills-list{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.skills-list > div{
+  margin: 1rem 2rem;
+}

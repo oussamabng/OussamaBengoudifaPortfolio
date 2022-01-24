@@ -6,15 +6,17 @@ const Logo = (props)=>{
   const { animation } = props;
   const [styles, api] = useSpring(() => ({
     from: { x:-45, y:60,borderRadius:'50%',height:'22px' },
+    config: {
+      duration: 4000,
+    },
   }))
 
   useEffect(() => {
     api({
       y:75,
       x:-40,
-      delay:200,
     })
-  }, [])
+  }, [api])
 
   return (
     <animated.div className={animation ? 'logo move' : 'logo'}>

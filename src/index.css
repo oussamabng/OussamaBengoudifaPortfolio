@@ -16,6 +16,10 @@ body {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
+ul{
+  
+  list-style: none!important;
+}
 .font-raleway{
   font-family: 'Raleway', sans-serif;
 }
@@ -78,6 +82,9 @@ body {
 .mx-4{
   margin: auto 4rem;
 }
+.mr-2{
+  margin-right: 2rem;
+}
 @keyframes shape {
   0% {
     right: 400;
@@ -129,4 +136,14 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.mw{
+  max-width: 1200px;
+}
+@media only screen and (max-width: 1300px) {
+  .portfolio{
+    justify-content: start;
+    margin-left: 5rem;
+  }
 }
