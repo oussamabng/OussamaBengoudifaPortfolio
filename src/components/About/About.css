@@ -13,6 +13,7 @@
   opacity: 0.1;
   font-family: 'Azo Sans Black';
   z-index: 20;
+  margin-top: 0rem;
 }
 .about > div > h3 > span {
   color: var(--secondary-color);

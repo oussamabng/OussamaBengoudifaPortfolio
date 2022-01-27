@@ -9,6 +9,9 @@
   --white-color:#FFFFFF;
   --grey-color:#333333;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   margin: 0;
@@ -85,6 +88,9 @@ ul{
 .mr-2{
   margin-right: 2rem;
 }
+.mx-2{
+  margin: auto 2rem;
+}
 @keyframes shape {
   0% {
     right: 400;
@@ -146,4 +152,7 @@ ul{
     justify-content: start;
     margin-left: 5rem;
   }
+}
+a{
+  text-decoration: none;
 }

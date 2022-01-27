@@ -9,7 +9,7 @@ import {ReactComponent as Star} from "../../assets/icons/star.svg";
 const Sidebar = (props)=>{
   const {activeItem,setActiveItem} = props;
   return(
-    <div className="Sidebar mx-4">
+    <div className="Sidebar mx-2">
       <span onClick={()=>setActiveItem('home')} className={activeItem==='home'?'active':''}>
         <Home />
       </span>

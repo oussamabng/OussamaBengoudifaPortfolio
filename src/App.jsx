@@ -5,6 +5,7 @@ import Shape from "./components/Shape/Shape";
 import Sidebar from "./components/Sidebar/Sidebar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
+import Education from "./components/Education/Education";
 
 
 const App = ()=>{
@@ -39,6 +40,7 @@ const App = ()=>{
           { activeItem === 'home' && <Home /> }
           { activeItem === 'user' && <About /> }
           { activeItem === 'user' && <Skills /> }
+          { activeItem === 'user' && <Education /> }
           <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
       </div>
