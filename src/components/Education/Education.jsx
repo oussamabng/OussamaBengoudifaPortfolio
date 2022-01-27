@@ -3,7 +3,8 @@ import Shape from "../Shape/Shape";
 import Certificate from "../Certificate/Certificate";
 import Pdf from "../../assets/certificate.pdf";
 
-const Education = ()=>{
+const Education = (props)=>{
+  const { exp } = props;
   const education_list = [
     {
         date : 'Thu Jan 27 2022 04:46:05 GMT-0800 (Pacific Standard Time)',
@@ -38,6 +39,33 @@ const Education = ()=>{
   pdf : Pdf
 },
   ];
+  const exp_list = [
+    {
+      date : 'Thu Jan 27 2022 04:46:05 GMT-0800 (Pacific Standard Time)',
+      title : 'platform name',
+      place : 'front-end devloper',
+      desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing '
+    },
+    {
+      date : 'Thu Jan 27 2022 04:46:05 GMT-0800 (Pacific Standard Time)',
+      title : 'platform name',
+      place : 'front-end devloper',
+      desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing '
+    },
+    {
+      date : 'Thu Jan 27 2022 04:46:05 GMT-0800 (Pacific Standard Time)',
+      title : 'platform name',
+      place : 'front-end devloper',
+      desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing '
+    },
+    {
+      date : 'Thu Jan 27 2022 04:46:05 GMT-0800 (Pacific Standard Time)',
+      title : 'platform name',
+      place : 'front-end devloper',
+      desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing '
+    },
+  ]
+  const data_chosen = exp ? exp_list : education_list;
   return (
     <div className="skills">
     <div style={{
@@ -56,23 +84,23 @@ const Education = ()=>{
       margin:'2rem 0',
       marginBottom:'6rem'
     }} >
-      EDUCATION
+      {exp ? "EXPERIENCE" : "EDUCATION"}
     </h1>
     </div>
     <div className="skills-list">
       <div>
       {
-        education_list.slice(0,education_list.length/2).map(
-          (education)=>
-            <Certificate education={education} />
+        data_chosen.slice(0,data_chosen.length/2).map(
+          (data)=>
+            <Certificate data={data} exp={exp} />
         )
       }
       </div>
       <div>
       {
-        education_list.slice(education_list.length/2,education_list.length).map(
-          (education)=>
-            <Certificate education={education} />
+        data_chosen.slice(data_chosen.length/2,data_chosen.length).map(
+          (data)=> 
+            <Certificate data={data} exp={exp} />
         )
       }
       </div>

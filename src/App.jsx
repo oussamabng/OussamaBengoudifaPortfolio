@@ -41,6 +41,7 @@ const App = ()=>{
           { activeItem === 'user' && <About /> }
           { activeItem === 'user' && <Skills /> }
           { activeItem === 'user' && <Education /> }
+          { activeItem === 'user' && <Education exp /> }
           <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
       </div>
