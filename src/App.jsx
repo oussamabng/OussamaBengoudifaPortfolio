@@ -6,17 +6,16 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
+import Work from "./components/Work/Work";
 
 
 const App = ()=>{
   const [activeItem,setActiveItem] = useState('home');
-
   const [logoClass,setLogoClass] = useState(false);
   useEffect(() => {
     setInterval(() => {
       setLogoClass(true);
     }, 2000);
-  
   }, [logoClass]);
   
   return (
@@ -42,6 +41,7 @@ const App = ()=>{
           { activeItem === 'user' && <Skills /> }
           { activeItem === 'user' && <Education /> }
           { activeItem === 'user' && <Education exp /> }
+          { activeItem === 'bag' && <Work /> }
           <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
       </div>
