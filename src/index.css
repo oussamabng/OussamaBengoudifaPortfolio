@@ -156,3 +156,6 @@ ul{
 a{
   text-decoration: none;
 }
+.skills-list.education{
+  justify-content: space-between!important;
+}

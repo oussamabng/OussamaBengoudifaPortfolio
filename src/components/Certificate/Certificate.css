@@ -59,8 +59,10 @@
 }
 .certificate-desc{
   margin: 0rem 2rem;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Azo Sans Md';
+  max-width: 350px;
+  text-align: left;
 }
 .certificate-button{
   margin: 0rem 2rem;

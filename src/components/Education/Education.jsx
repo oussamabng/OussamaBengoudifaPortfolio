@@ -19,7 +19,7 @@ const Education = (props)=>{
       title : 'advanced python course',
       subtitle : '',
       place : 'Higher school of computer science (ESI) -sidi bel abbes-',
-      desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing',
+      desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id leo eget risus sagittis efficitur eu a nisl. Proin porttitor euismod ex, lobortis eleifend mauris rhoncus vel. Aliquam auctor finibus sodales. Ut vel nunc cursus, commodo dui id, sagittis massa. Nulla nec rhoncus lacus. Maecenas dictum ex mi, id convallis nisi feugiat eget. Ut gravida nunc lectus, sed dignissim est aliquet et. Proin vel mauris non lacus pulvinar laoreet in non urna. Ut id pretium nisl, a hendrerit felis.',
       pdf : Pdf
   },
   {
@@ -87,7 +87,7 @@ const Education = (props)=>{
       {exp ? "EXPERIENCE" : "EDUCATION"}
     </h1>
     </div>
-    <div className="skills-list">
+    <div className="skills-list education">
       <div>
       {
         data_chosen.slice(0,data_chosen.length/2).map(
