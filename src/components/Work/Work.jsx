@@ -1,9 +1,9 @@
 import "./Work.css";
 import Img from '../../assets/work.png';
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 
 const Work = ()=>{
-  const [activeItem,setActiveItem] = useState("web");
+  const [activeItem,setActiveItem] = useState("all");
   const handleActiveItem = (e) =>{
     setActiveItem(e.currentTarget.attributes.data.value);
   }
@@ -19,18 +19,6 @@ const Work = ()=>{
       ],
       author:'Mohamed doe',
       type:'web'
-    },
-    {
-      img:Img,
-      title:"platform name",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      stacks:[
-        'HTML5',
-        'CSS3',
-        'REACT'
-      ],
-      author:'Mohamed doe',
-      type:'mobile'
     },
     {
       img:Img,

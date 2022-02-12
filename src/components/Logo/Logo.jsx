@@ -7,12 +7,12 @@ const Logo = (props)=>{
   const [styles, api] = useSpring(() => ({
     from: { x:-45, y:60,borderRadius:'50%',height:'22px' },
     config: {
-      duration: 4000,
+      duration: 1000,
     },
   }))
 
   useEffect(() => {
-    api({
+    api.start({
       y:75,
       x:-40,
     })

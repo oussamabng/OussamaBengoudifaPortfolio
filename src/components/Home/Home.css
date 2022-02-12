@@ -57,19 +57,19 @@
   max-width: 500px;
   margin: auto 2rem;
 }
-.portfolio-description h1{
+.portfolio-description div{
   display: flex;
   align-items: center;
   position: relative;
   z-index: 999;
 }
-.portfolio-description h1 h2{
+.portfolio-description div > h2{
   font-size: 45px;
   font-family: 'Azo Sans Bold';
   text-decoration: underline;
   margin: 0 .5rem;
 }
-.portfolio-description h1 span{
+.portfolio-description div span{
   font-size: 35px;
   font-family: 'Azo Sans Bold';
   color: var(--secondary-color);

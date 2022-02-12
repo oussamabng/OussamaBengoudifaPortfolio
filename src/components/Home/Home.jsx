@@ -31,7 +31,7 @@ const Home = ()=>{
         <h3> <div></div> I’m available for a freelance job. Hire me</h3>
       </div>
       <div className="portfolio-description">
-        <h1><h2>OUSSAMA</h2> <span>BENGOUDIFA</span></h1>
+        <div><h2>OUSSAMA</h2> <span>BENGOUDIFA</span></div>
         <p>I'm an Algerian based Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="action-button" onClick={handleGetCv} >
           <p>DOWNLOAD MY CV</p>

@@ -41,20 +41,20 @@ const About = ()=>{
         <div className="mr-2 special-box">
           <h6>5 <div>+</div> </h6>
           <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
-          <p>
+          <h2>
             years of
             <br />
             <p>experience</p>
-          </p>
+          </h2>
         </div>
         <div className="mr-2 special-box">
           <h6>12 <div>+</div> </h6>
           <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
-          <p>
+          <h2>
             projects
             <br />
             <p style={{opacity:0}} >experience</p>
-          </p>
+          </h2>
         </div>
       </div>
       <div className="action-button" onClick={handleGetCv} >
