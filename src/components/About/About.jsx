@@ -1,14 +1,24 @@
 import "./About.css";
 import Shape from "../Shape/Shape";
 import ActionButton from "../ActionButton/ActionButton";
+import Pdf from "../../assets/CV.pdf";
 
 const About = ()=>{
-  const handleGetCv = ()=>{};
   return (
   <div className="about mw homepage">
     <div><h1>INFORMATIONS</h1> <h3>ABOUT <span>ME</span></h3></div>
     <div className="personal">
       <h4>Personal infos</h4>
+      <div className="mobile">
+          <h4>Personal infos</h4>
+          <p><span>First Name: </span>Oussama</p>
+          <p><span>Last Name: </span>Bengoudifa</p>
+          <p><span>Age: </span>22 Yo</p>
+          <p><span>Address:: </span>Mostaganem</p>
+          <p><span>Phone: </span>+213 541 66 99 99</p>
+          <p><span>Nationality: </span>Algerian</p>
+          <p><span>Languages: </span>French , English , Arabic</p>
+        </div>
       <div className="flex justify-between items-center">
         <div className="mr-2">
         <div>
@@ -57,7 +67,27 @@ const About = ()=>{
           </h2>
         </div>
       </div>
-      <ActionButton content="DOWNLOAD MY CV" />
+      <ActionButton isPdf pdf={Pdf}  content="DOWNLOAD MY CV" />
+      <div className="mobile flex flex-col items-center">
+        <div className="mr-2 special-box">
+          <h6>5 <div>+</div> </h6>
+          <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
+          <h2>
+            years of
+            <br />
+            <p>experience</p>
+          </h2>
+        </div>
+        <div className="mr-2 special-box">
+          <h6>12 <div>+</div> </h6>
+          <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
+          <h2>
+            projects
+            <br />
+            <p style={{opacity:0}} >experience</p>
+          </h2>
+        </div>
+      </div>
     </div>
     
   </div>

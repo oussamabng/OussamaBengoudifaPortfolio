@@ -1,7 +1,8 @@
 import "./Home.css";
 import Picture from "../../assets/portfolio.jpeg";
 import Typed from "react-typed";
-import ActionButton from "../ActionButton/ActionButton"
+import ActionButton from "../ActionButton/ActionButton";
+import Pdf from "../../assets/CV.pdf";
 
 const Home = ()=>{
   const textLines = [
@@ -32,7 +33,7 @@ const Home = ()=>{
       <div className="portfolio-description">
         <div><h2>OUSSAMA</h2> <span>BENGOUDIFA</span></div>
         <p>I'm an Algerian based Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <ActionButton content="DOWNLOAD MY CV" />
+        <ActionButton pdf={Pdf} isPdf content="DOWNLOAD MY CV" />
       </div>
     </div>
   )

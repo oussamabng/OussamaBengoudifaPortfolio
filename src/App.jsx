@@ -37,6 +37,8 @@ const App = ()=>{
         )
        }
         <div className="mt-10 mw">
+        <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
+
           { activeItem === 'home' && <Home /> }
           { activeItem === 'user' && <About /> }
           { activeItem === 'user' && <Skills /> }
@@ -44,7 +46,6 @@ const App = ()=>{
           { activeItem === 'user' && <Education exp /> }
           { activeItem === 'bag' && <Work /> }
           { activeItem === 'mail' && <Message /> }
-          <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
       </div>
     </div>

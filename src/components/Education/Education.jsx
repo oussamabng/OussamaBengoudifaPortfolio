@@ -81,8 +81,8 @@ const Education = (props)=>{
     }} >
     <h1 style={{
       fontSize:"16px",
-      margin:'2rem 0',
-      marginBottom:'6rem'
+      margin:'3rem 0',
+      marginBottom:'2rem'
     }} >
       {exp ? "EXPERIENCE" : "EDUCATION"}
     </h1>

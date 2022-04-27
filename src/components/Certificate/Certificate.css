@@ -83,3 +83,25 @@
   background-color: var(--secondary-color);
   color: white!important;
 }
+@media only screen and (max-width: 1024px){
+  .certificate-svg{
+    display: none!important;
+  }
+  .certificate-title span{
+    margin: 0;
+  }
+  .certificate-date{
+    display: flex;
+    padding: .5rem 1rem;
+  }
+  .certificate-button p{
+    margin: .75rem 1rem;
+  }
+  .ceritificate{
+    margin-bottom: 2rem!important;
+  }
+  .certificate-detail{
+    border-bottom: 1px solid #333333;
+    padding-bottom: 2rem;
+  }
+}

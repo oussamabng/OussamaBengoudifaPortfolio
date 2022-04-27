@@ -74,3 +74,46 @@
   width: 30%;
   font-size: 14px;
 }
+.personal  .mobile{
+  display: none;
+}
+@media only screen and (max-width: 1024px){
+  .personal > h4{
+    display: none;
+  }
+  .special-box {
+    display: none!important;
+  }
+  .personal > div > div{
+    display: none;
+  }
+  .personal .mobile{
+    display: flex;
+    flex-direction: column;
+  }
+  .personal .mobile h4{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .about .action-button{
+    width: 100%;
+    font-size: 14px;
+    padding-left: 1rem;
+    margin: 3rem 0!important;
+  }
+  .action-button > div{
+    display: flex!important;
+  }
+  .mobile .special-box{
+    display: flex!important;
+    margin: 1rem 0;
+    padding: 1rem;
+    max-width: 250px;
+    min-width: 200px;
+  }
+  .mobile .special-box h6{
+    padding-right: 0rem!important;
+  }
+}
