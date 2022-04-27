@@ -1,0 +1,52 @@
+.action-button{
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px;
+    font-family: 'Azo Sans Bold';
+    width: 50%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 2rem 0;
+  }
+  .action-button > p{
+    padding: 0 2rem;
+  }
+  .action-button > span{
+    width: 50px;
+    height: 0;
+  }
+  .action-button > div{
+    min-width: 40px;
+    position: absolute;
+    right: -1%;
+    border-radius: 50%;
+    height: 101%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .action-button img{
+    width: 10px;
+    height: 16px;
+  }
+  .action-button:hover{
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  @media screen and (max-width: 1024px){
+    .action-button{
+      width: 80%;
+      font-size: 14px;
+      max-width: 250px;
+      margin: 0!important;
+    }
+    .action-button > p{
+      padding-left: 1rem;
+    }
+  }
+  

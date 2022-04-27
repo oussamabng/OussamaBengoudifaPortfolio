@@ -3,3 +3,75 @@
   top: 15%;
   right: 40%;
 }
+.message-row{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.message-details{
+  width:30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.message-details > h1{
+  font-size:16px;
+  font-weight: 400;
+}
+.message-details > h1 > span{
+  color: var(--secondary-color);
+}
+.message-details > p{
+  font-size: 14px;
+  font-weight: 400;
+}
+.message-details > div{
+  margin: 1rem 0;
+}
+.message-details > div > span{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 16;
+  font-weight: 400;
+}
+.message-details > div > span svg{
+  padding-right: 1rem;
+}
+.message-form{
+  width:60%;
+}
+.message-form .input-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.message-form .input-group input::placeholder,.message-form .input-group textarea::placeholder{
+  color: white;
+  opacity: .6;
+}
+.message-form .input-group input,.message-form .input-group textarea{
+  margin: 1rem 0;
+  margin-right: .75rem;
+  font-size: 16px;
+  padding: 1rem 1.5rem;
+  background-color: #333333;
+  border-radius: 25px;
+  color: white;
+  outline: none;
+  border: none;
+}
+.message-form .input-group #name{
+  width: 40%;
+}
+.message-form .input-group #email{
+  width: 60%;
+}
+.message-form .input-group #subject,.message-form .input-group textarea{
+  width: 100%!important;
+}
+.message-form .action-button{
+  float: right;
+  width: 200px;
+}

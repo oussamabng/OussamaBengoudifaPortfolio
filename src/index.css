@@ -159,3 +159,6 @@ a{
 .skills-list.education{
   justify-content: space-between!important;
 }
+textarea {
+  resize: none;
+} 

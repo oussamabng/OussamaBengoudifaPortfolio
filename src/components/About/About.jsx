@@ -1,6 +1,6 @@
 import "./About.css";
 import Shape from "../Shape/Shape";
-import V from "../../assets/icons/v.svg";
+import ActionButton from "../ActionButton/ActionButton";
 
 const About = ()=>{
   const handleGetCv = ()=>{};
@@ -57,11 +57,7 @@ const About = ()=>{
           </h2>
         </div>
       </div>
-      <div className="action-button" onClick={handleGetCv} >
-          <p>DOWNLOAD MY CV</p>
-          <span></span>
-          <div><img src={V} alt="icon" /></div>
-        </div>
+      <ActionButton content="DOWNLOAD MY CV" />
     </div>
     
   </div>

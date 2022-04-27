@@ -4,6 +4,8 @@ import { ReactComponent as Adr } from "../../assets/icons/adr.svg";
 import { ReactComponent as Phone } from "../../assets/icons/phone.svg";
 import { ReactComponent as Mail } from "../../assets/icons/mail2.svg";
 
+import ActionButton from "../ActionButton/ActionButton";
+
 const Message = ()=>{
   return(
     <div className="about work message">
@@ -24,7 +26,19 @@ const Message = ()=>{
           <span> <Mail /> Oussamabengoudifaperso@gmail.com </span>
           </div>
         </div>
-        <div className="message-form"></div>
+        <div className="message-form">
+          <div className="input-group">
+            <input type="text" placeholder="Your Name" id="name"/>
+            <input type="text" placeholder="Your Email" id="email"/>
+          </div>
+          <div className="input-group">
+            <input type="text" placeholder="Subject" id="subject"/>
+          </div>
+          <div className="input-group">
+            <textarea  name="Message" id="Message" placeholder="Message ..." cols="30" rows="10"></textarea>
+          </div>
+          <ActionButton content="SEND" />
+        </div>
       </div>
     </div>
   );
