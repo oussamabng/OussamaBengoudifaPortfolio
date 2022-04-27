@@ -10,10 +10,10 @@
   padding: 1rem 0;
 }
 .message-details{
-  width:30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0!important;
 }
 .message-details > h1{
   font-size:16px;
@@ -25,6 +25,7 @@
 .message-details > p{
   font-size: 14px;
   font-weight: 400;
+  display: flex;
 }
 .message-details > div{
   margin: 1rem 0;
@@ -74,4 +75,29 @@
 .message-form .action-button{
   float: right;
   width: 200px;
+}
+@media only screen and (max-width: 1024px){
+  .message-row{
+    flex-direction: column;
+  }
+  .message-form{
+    width: 90%;
+    padding: 0 1rem;
+  }
+  .message-details{
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .message-form .input-group{
+    flex-direction: column;
+  }
+  .message-form .input-group #name{
+    width: 80%;
+  }
+  .message-form .input-group #subject,.message-form .input-group textarea{
+  width: 80%!important;
+}
+  .message-form .input-group #email{
+    width: 80%;
+  }
 }

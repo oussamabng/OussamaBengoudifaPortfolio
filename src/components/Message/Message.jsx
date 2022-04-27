@@ -14,8 +14,8 @@ const Message = ()=>{
         <div className="message-details">
           <h1>TEXT ME <span>ANYTIME</span> ! </h1>
           <p>
-              Feel free to get in touch with me. I am 
-              always open to discussing new projects, 
+              Feel free to get in touch with me.<br/> I am 
+              always open to discussing new projects, <br/>
               creative ideas or opportunities to be 
               part of your visions.
           </p>
