@@ -87,6 +87,9 @@
     display: block;
     margin: 0;
   }
+  .portfolio .action-button{
+    width: 400px!important;
+  }
   .portfolio-description{
     display: flex;
     flex-direction: column;
