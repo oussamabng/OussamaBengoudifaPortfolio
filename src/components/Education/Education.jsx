@@ -42,7 +42,7 @@ const Education = (props)=>{
       </div>
       <div>
       {
-        data_chosen.slice(0,data_chosen.length/2).map(
+        data_chosen.slice(data_chosen.length/2,data_chosen.length).map(
           (data)=> 
             <Certificate data={data} exp={exp} />
         )

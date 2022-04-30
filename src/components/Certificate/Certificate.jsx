@@ -2,7 +2,6 @@ import "./Certificate.css";
 import moment from 'moment';
 import { ReactComponent as EducationSVG } from "../../assets/icons/education.svg";
 import { ReactComponent as ExperienceSVG } from "../../assets/icons/work.svg";
-import Pdf from "../../assets/certificates/test.pdf"
 
 
 
@@ -18,7 +17,7 @@ const Certificate = (props)=>{
         </div>
         <div className="certificate-detail flex flex-col">
           <div className="certificate-date">
-            <span>{ moment( Date(data.date_start)).format("MMM YYYY")} - { moment( Date(data.date_end)).format("MMM YYYY") }</span>
+            <span>{ moment(new Date(data.date_start)).format("DD MMM YYYY")} {data.date_end.length>0? " - " + moment(new Date(data.date_end)).format("DD MMM YYYY") :""} {  }</span>
           </div>
           <div className="certificate-title">
             <h1> {data.name}    { !exp && <span> {`${data.type.length>0?(`(${data.type})`):''}`} </span> }  </h1>
@@ -31,7 +30,7 @@ const Certificate = (props)=>{
           </div>
           {
             !exp && <div className="certificate-button">
-            <a href={Pdf} target='_blank' rel='noopener noreferrer'>
+            <a href={require('../../assets/certificates/'+data.certificate)}  target='_blank' rel='noopener noreferrer'>
             <p>View Certification</p>
             </a>
             </div>

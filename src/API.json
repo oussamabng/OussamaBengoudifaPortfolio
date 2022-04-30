@@ -97,24 +97,93 @@
     "educations": [
       {
         "id": 1,
-        "name": "engineer and master degree",
-        "type": "information and web system",
-        "place": "Higher school of computer science (ESI) -sidi bel abbes-",
-        "date_start": "2020-12-30",
-        "date_end": "2021-04-13",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing",
-        "certificate": "http://127.0.0.1:8000/media/certificates/certificate.pdf",
+        "name": "Baccalaureate Certificate",
+        "type": "",
+        "place": "Okraf mohamed (Mostaganem)",
+        "date_start": "2017-07-25",
+        "date_end": "",
+        "description": "A bachelor's degree is an undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to six years",
+        "certificate": "BAC.pdf",
+        "portfolio": 1
+      },
+      {
+        "id": 3,
+        "name": "Using Python to Interact with the Operating System",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2021-11-14",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "Using Python to Interact with the Operating.pdf",
+        "portfolio": 1
+      }
+      ,
+      {
+        "id": 6,
+        "name": "Configuration Management and the Cloud",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2022-01-20",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "Configuration Management and the Cloud.pdf",
+        "portfolio": 1
+      }
+      ,
+      {
+        "id": 4,
+        "name": "Introduction to Git and GitHub",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2021-12-06",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "Git and GitHub.pdf",
         "portfolio": 1
       },
       {
         "id": 2,
-        "name": "advanced python course",
-        "type": "",
-        "place": "Higher school of computer science (ESI) -sidi bel abbes-",
-        "date_start": "2020-12-30",
-        "date_end": "2021-04-13",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing",
-        "certificate": "http://127.0.0.1:8000/media/certificates/certificate.pdf",
+        "name": "Crash Course on Python",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2020-04-17",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "python.pdf",
+        "portfolio": 1
+      },
+      {
+        "id": 5,
+        "name": "Troubleshooting and Debugging Techniques",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2021-12-20",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "Troubleshooting and Debugging Techniques.pdf",
+        "portfolio": 1
+      },
+      {
+        "id": 7,
+        "name": "Automating Real-World Tasks with Python",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2022-03-03",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "Automating Real-World Tasks.pdf",
+        "portfolio": 1
+      },
+      
+      {
+        "id": 8,
+        "name": "Google IT Automation with Python Professional Certificate",
+        "type": "Google",
+        "place": "coursera",
+        "date_start": "2022-03-03",
+        "date_end": "",
+        "description": "an online non-credit course authorized by Google and offered through Coursera",
+        "certificate": "google_it_automation.pdf",
         "portfolio": 1
       }
     ],
