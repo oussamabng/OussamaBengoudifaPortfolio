@@ -40,10 +40,10 @@
   }
   @media screen and (max-width: 1024px){
     .action-button{
-      width: 80%;
+      width: 50%!important;
       font-size: 14px;
       max-width: 250px;
-      margin: 0!important;
+      margin: 0 .5rem!important;
     }
     .action-button > p{
       padding-left: 1rem;
