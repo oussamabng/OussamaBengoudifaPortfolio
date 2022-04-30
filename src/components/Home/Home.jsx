@@ -14,7 +14,6 @@ const Home = ()=>{
         <div className="flex flex-col items-center">
           <div className="border2"></div>
           <img src={Picture} alt="oussama bengoudifa" />
-          <span>Hi there ! I am</span>
           <pre>
           <span>
           [</span>         
@@ -31,7 +30,18 @@ const Home = ()=>{
       </div>
       <div className="portfolio-description">
         <div><h2>{API["name"].split(" ")[1]}</h2> <span>{API["name"].split(" ")[0]}</span></div>
-        <p>{API["portfolio"]["description"]}</p>
+        <p>
+        I am an full-stack developer.
+        <br />
+        And an automation engineer with python.
+        <br />
+        Check out my certificates and my experiences.
+        <br />
+        Feel free to take a look at my latest projects.
+        <br />
+        Remotely available UTC−1 to UTC+8.
+        <br />
+        </p>
         <ActionButton pdf={Pdf} isPdf content="DOWNLOAD MY CV" />
       </div>
     </div>
