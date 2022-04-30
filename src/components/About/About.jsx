@@ -64,7 +64,7 @@ const About = ()=>{
         </div>
         </div>
         <div className="mr-2 special-box">
-          <h6>5 <div>+</div> </h6>
+          <h6>{API["nb_exp"]} <div>+</div> </h6>
           <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
           <h2>
             years of
@@ -73,7 +73,7 @@ const About = ()=>{
           </h2>
         </div>
         <div className="mr-2 special-box">
-          <h6>{API["nb_exp"]} <div>+</div> </h6>
+          <h6>{API["nb_projects"]} <div>+</div> </h6>
           <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
           <h2>
             projects
@@ -85,7 +85,7 @@ const About = ()=>{
       <ActionButton isPdf pdf={Pdf}  content="DOWNLOAD MY CV" />
       <div className="mobile flex flex-col items-center">
         <div className="mr-2 special-box">
-          <h6>{API["nb_projects"]} <div>+</div> </h6>
+          <h6>{API["nb_exp"]} <div>+</div> </h6>
           <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
           <h2>
             years of
@@ -94,7 +94,7 @@ const About = ()=>{
           </h2>
         </div>
         <div className="mr-2 special-box">
-          <h6>12 <div>+</div> </h6>
+          <h6>{API["nb_projects"]} <div>+</div> </h6>
           <Shape width={33} height={0} color={"#FF9900"} type="line" degree={0} relative />  
           <h2>
             projects
