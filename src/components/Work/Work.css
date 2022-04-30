@@ -5,6 +5,9 @@
   margin: 0 2rem;
   padding: 0;
 }
+.work{
+  position: relative;
+}
 .work .work-filter{
   margin-bottom: 2rem;
 }
@@ -26,6 +29,32 @@
   display: flex;
   margin: 1rem 0;
   box-shadow: 2px 3px 10px black;
+  height: 260px;
+  cursor: pointer;
+  transform: translateZ(42px);
+  position: relative;
+}
+.modal-project{
+  padding: 1rem;
+  position: fixed!important;
+  box-shadow: 2px 3px 10px black;
+  background-color: var(--primary-color);;
+  width: 60vw;
+  height: 85vh;
+  color: white!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+}
+
+.work-platform:hover{
+  transform: perspective(200px) translateZ(5px);
+}
+.work-platform img{
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
 }
 .work-detail h1{
   font-size: 16px;
@@ -64,7 +93,31 @@
   background-color: transparent;
   color: var(--secondary-color);
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 14px;  
+}
+
+.modal-project .project img{
+  width: 100%;
+  height: 600px;
+  object-fit: fill; 
+}
+.slick-prev:before{
+  font-size: 40px!important;
+}
+.slick-next:before{
+  font-size: 40px!important;
+}
+.slick-arrow.slick-next{
+  position: absolute;
+  top: 100%;
+  right: 20%;
+  transform: translate(0%, 180%);
+}
+.slick-arrow.slick-prev{
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  transform: translate(0%, 180%);
 }
 @media only screen and (max-width: 1024px){
   .work-platform{
@@ -72,5 +125,23 @@
   }
   .work .work-filter{
     width: 100%;
+  }
+  .work-platform img{
+    height: 200px!important;
+    width: 100%!important;
+  }
+  .work-platform{
+    max-height: 700px;
+    height: max-content;
+    min-height: 500px;
+  }
+  .slick-arrow{
+    display: none!important;
+  }
+  .modal-project{
+    display: none;
+  }
+  .blurred{
+    filter: blur(0px) opacity(100%);
   }
 }

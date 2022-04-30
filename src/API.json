@@ -25,7 +25,7 @@
         "portfolio": 1
       }
     ],
-    "nb_projects": 0,
+    "nb_projects": 5,
     "nb_exp": 3,
     "languages": [
       {
@@ -151,7 +151,7 @@
           "ReactJs"
         ],
         "images": [
-          "http://127.0.0.1:8000/media/images/work.png"
+          "image1.png"
         ]
       },
       {
@@ -164,7 +164,8 @@
           "Flutter"
         ],
         "images": [
-          "http://127.0.0.1:8000/media/images/work.png"
+          "portfolio.jpeg",
+          "ig.jpg"
         ]
       }
     ]

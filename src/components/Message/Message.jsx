@@ -121,6 +121,7 @@ const Message = ()=>{
     })
     .catch((err) => {
       console.log('FAILED...', err);
+      console.log(error)
       setLoading(false)
     });
     } else {

@@ -21,8 +21,10 @@ const App = ()=>{
   
   return (
     <div className={logoClass?'portfolio move':'portfolio'}>
-      <Logo animation={logoClass} />
-      <div className={logoClass?'home opacity-1':'home opacity-0'}>
+      <Logo setActiveItem={setActiveItem} animation={logoClass} />
+      {
+        logoClass && 
+        <div className={logoClass?'home opacity-1':'home opacity-0'}>
        { activeItem === 'home' &&
         (
         <>
@@ -48,6 +50,7 @@ const App = ()=>{
           { activeItem === 'mail' && <Message /> }
         </div>
       </div>
+      }
     </div>
   );
 }

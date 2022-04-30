@@ -163,3 +163,6 @@ textarea {
   resize: none;
 } 
 
+.blurred{
+  filter: blur(2px) opacity(40%);;
+}
