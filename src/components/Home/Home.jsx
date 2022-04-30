@@ -3,12 +3,11 @@ import Picture from "../../assets/portfolio.jpeg";
 import Typed from "react-typed";
 import ActionButton from "../ActionButton/ActionButton";
 import Pdf from "../../assets/CV.pdf";
+import API from "../../API.json";
 
 const Home = ()=>{
-  const textLines = [
-    `Full stack developer`,
-    `IT software engineer`
-  ]
+  const textLines = []
+  API["job_titles"].map((title)=>textLines.push(title.title))
   return(
     <div className="homepage">
       <div className="portfolio-image mx-4">
@@ -31,8 +30,8 @@ const Home = ()=>{
         <h3> <div></div> I’m available for a freelance job. Hire me</h3>
       </div>
       <div className="portfolio-description">
-        <div><h2>OUSSAMA</h2> <span>BENGOUDIFA</span></div>
-        <p>I'm an Algerian based Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div><h2>{API["name"].split(" ")[1]}</h2> <span>{API["name"].split(" ")[0]}</span></div>
+        <p>{API["portfolio"]["description"]}</p>
         <ActionButton pdf={Pdf} isPdf content="DOWNLOAD MY CV" />
       </div>
     </div>

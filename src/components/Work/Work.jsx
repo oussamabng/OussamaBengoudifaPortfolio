@@ -1,62 +1,14 @@
 import "./Work.css";
 import Img from '../../assets/work.png';
 import React,{useState} from "react";
+import API from "../../API.json";
 
 const Work = ()=>{
   const [activeItem,setActiveItem] = useState("all");
   const handleActiveItem = (e) =>{
     setActiveItem(e.currentTarget.attributes.data.value);
   }
-  const work_list = [
-    {
-      img:Img,
-      title:"platform name",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      stacks:[
-        'HTML5',
-        'CSS3',
-        'REACT'
-      ],
-      author:'Mohamed doe',
-      type:'web'
-    },
-    {
-      img:Img,
-      title:"platform name",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      stacks:[
-        'HTML5',
-        'CSS3',
-        'REACT'
-      ],
-      author:'Mohamed doe',
-      type:'mobile'
-    },
-    {
-      img:Img,
-      title:"platform name",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      stacks:[
-        'HTML5',
-        'CSS3',
-        'REACT'
-      ],
-      author:'Mohamed doe',
-      type:'web'
-    },
-    {
-      img:Img,
-      title:"platform name",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      stacks:[
-        'HTML5',
-        'CSS3',
-        'REACT'
-      ],
-      author:'Mohamed doe',
-      type:'others'
-    },
-  ];
+  const work_list = API["projects"]
   return (
     <div className="about work">
       <div><h1>WORKS</h1><h3>MY<span>PORTFOLIO</span></h3></div>
@@ -73,10 +25,10 @@ const Work = ()=>{
           activeItem === "all" ? work : work.type === activeItem
         ).map(work=>
       <div className="work-platform">
-      <img src={work.img} alt="work" />
+      <img src={Img} alt="work" />
       <div className="work-detail">
-        <h1>{work.title}</h1>
-        <p> {work.desc} </p>
+        <h1>{work.name}</h1>
+        <p> {work.description} </p>
         <span>USED STACK :</span>
         <div className="work-stack">
           {
@@ -87,7 +39,7 @@ const Work = ()=>{
               )
           }
         </div>
-        <h2>Client : {work.author}</h2>
+        <h2>Client : {work.client}</h2>
 
       </div>
     </div>

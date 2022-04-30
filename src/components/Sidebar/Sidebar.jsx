@@ -5,7 +5,6 @@ import {ReactComponent as Home} from "../../assets/icons/home.svg";
 import {ReactComponent as User} from "../../assets/icons/user.svg";
 import {ReactComponent as Bag} from "../../assets/icons/bag.svg";
 import {ReactComponent as Mail} from "../../assets/icons/mail.svg";
-import {ReactComponent as Star} from "../../assets/icons/star.svg";
 import {ReactComponent as Menu} from "../../assets/icons/menu.svg";
 
 
@@ -29,9 +28,6 @@ const Sidebar = (props)=>{
       </span>
       <span onClick={()=>setActiveItem('mail')} className={activeItem==='mail'?'active':''}>
         <Mail />
-      </span>
-      <span onClick={()=>setActiveItem('star')} className={activeItem==='star'?'active':''}>
-        <Star />
       </span>
     </div>
     <div className="Sidebar-mobile" onClick={handleMenu} >
@@ -63,12 +59,7 @@ const Sidebar = (props)=>{
       }} className={activeItem==='mail'?'active':''}>
         <Mail />
       </span>
-      <span onClick={()=>{
-        setActiveItem('star');
-        setIsHidden(true);
-      }} className={activeItem==='star'?'active':''}>
-        <Star />
-      </span>
+      
     </div>
     </>
   )

@@ -1,42 +1,10 @@
 import "./Skills.css";
 import Shape from "../Shape/Shape";
 import PercentageBar from "../PercentageBar/PercentageBar";
+import API from "../../API.json";
 
 const Skills = ()=>{
-  const skill_list = [
-    {
-      name:"HTML5",
-      percentage:97
-    },
-    {
-      name:"Javascript (ES6 +)",
-      percentage:97
-    },
-    {
-      name:"CSS3",
-      percentage:97
-    },
-    {
-      name:"PHP",
-      percentage:97
-    },
-    {
-      name:"ReactJs",
-      percentage:97
-    },
-    {
-      name:"NodeJs",
-      percentage:97
-    },
-    {
-      name:"Django",
-      percentage:97
-    },
-    {
-      name:"PYTHON",
-      percentage:97
-    },
-  ]
+  const skill_list = API["skills"]
   return (
   <div className="skills">
     <div style={{
@@ -62,7 +30,7 @@ const Skills = ()=>{
       {
         skill_list.slice(0,skill_list.length/2).map(
           (skill)=>
-            <PercentageBar name={skill.name} percentage={skill.percentage} />
+            <PercentageBar id={skill.id} name={skill.name} percentage={skill.pourcentage*100} />
         )
       }
       </div>
@@ -70,7 +38,7 @@ const Skills = ()=>{
       {
         skill_list.slice(skill_list.length/2,skill_list.length).map(
           (skill)=>
-            <PercentageBar name={skill.name} percentage={skill.percentage} />
+            <PercentageBar id={skill.id} name={skill.name} percentage={skill.pourcentage*100} />
         )
       }
       </div>

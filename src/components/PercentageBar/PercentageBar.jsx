@@ -2,13 +2,13 @@ import "./PercentageBar.css";
 import React,{useState,useEffect} from "react";
 
 const PercentageBar = (props)=>{
-  const { name,percentage,index } = props;
+  const { name,percentage,id } = props;
   const [width,setWidth] = useState(0);
   useEffect(()=>{
     setWidth(percentage)
   },[percentage]) 
   return (
-    <div className="percentage" key={index}>
+    <div className="percentage" key={id}>
       <div className="layer" style={{
         width:`${width}%`
       }} ></div>
