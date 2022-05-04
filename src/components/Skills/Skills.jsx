@@ -1,14 +1,19 @@
-import React from "react"
+import React,{useState,useEffect} from "react"
 import "./Skills.css";
 import Shape from "../Shape/Shape";
 import PercentageBar from "../PercentageBar/PercentageBar";
 
 const Skills = (props)=>{
   const { dataSkills } = props;
+  const [data,setData] = useState([]);
+  useEffect(()=>{
+    setData(dataSkills["skills"])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
   return (
     <>
     {
-      dataSkills.length > 0 &&
+      data.length > 0 &&
       <div className="skills">
     <div style={{
       display:'flex',
@@ -31,7 +36,7 @@ const Skills = (props)=>{
     <div className="skills-list">
       
       {
-        dataSkills.slice(0,dataSkills.length/2).map(
+        data.slice(0,data.length/2).map(
           (skill,index)=>
           <div key={index.toString()}>
             <PercentageBar  name={skill.name} percentage={skill.pourcentage*100} />
@@ -39,7 +44,7 @@ const Skills = (props)=>{
         )
       }
       {
-        dataSkills.slice(dataSkills.length/2,dataSkills.length).map(
+        data.slice(data.length/2,data.length).map(
           (skill,index)=>
           <div key={index.toString()}>
             <PercentageBar  name={skill.name} percentage={skill.pourcentage*100} />

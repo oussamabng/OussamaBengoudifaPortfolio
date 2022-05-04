@@ -1,4 +1,14 @@
 .skills-list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills-list.education{
+  display: block;
+}
+.skills-list > div{
+  width: 40%;
 }
 .skills-list > .list{
   margin: 1rem 2rem;
@@ -7,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 @media only screen and (max-width: 1024px){
   .skills-list{
