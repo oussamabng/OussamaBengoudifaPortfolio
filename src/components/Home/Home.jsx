@@ -10,7 +10,7 @@ const Home = (props)=>{
   const { dataHome } = props;
   useEffect(()=>{
     setTextLines(dataHome.job_titles)
-  },[])
+  },[]) // eslint-disable-line react-hooks/exhaustive-deps
   return(
     <>
     {

@@ -11,7 +11,7 @@ const Education = (props)=>{
     if (exp){
       setData(dataExperience["experiences"])
     } else setData(dataEducation["educations"]) 
-  },[])
+  },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="skills">
