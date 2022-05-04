@@ -30,7 +30,6 @@ const Home = (props)=>{
           </span>
           </pre>
         </div>
-        <h3> <div></div> I’m available for a freelance job. Hire me</h3>
       </div>
       <div className="portfolio-description">
         <div><h2>{dataHome.fullname.split(" ")[1]}</h2> <span>{dataHome.fullname.split(" ")[0]}</span></div>

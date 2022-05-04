@@ -40,6 +40,7 @@ async function getProjects(db) {
   const projectsCol = collection(db, 'projects')
   const projectsSnapshot = await getDocs(projectsCol);
   const projectsList = projectsSnapshot.docs.map(doc => doc.data());
+  projectsList.sort((a,b)=> new Date(a.date_start) - new Date(b.date_start));
   return projectsList;
 }
 

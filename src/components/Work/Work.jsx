@@ -47,10 +47,10 @@ const Work = (props)=>{
         data.filter((work)=>
           activeItem === "all" ? work : work.type === activeItem
         ).map((work,index)=>
-      <div key={index} className="work-platform" onClick={()=>showProject({images:work.images,name:work.name})} >
-      <img  src={work.images[0]} alt="work" />
+      <div key={index} className="work-platform"  >
+      <img  src={work.images[0]} onClick={()=>showProject({images:work.images,name:work.name})} alt="work" />
       <div className="work-detail">
-        <h1>{work.name}</h1>
+        <h1 onClick={()=>showProject({images:work.images,name:work.name})} >{work.name}</h1>
         <p> {work.description} </p>
         <span>USED STACK :</span>
         <div className="work-stack">
@@ -62,8 +62,10 @@ const Work = (props)=>{
               )
           }
         </div>
+        <div className="work_down">
         <h2>Client : {work.client}</h2>
-
+        { work.repository.length >0 && <a href={work.repository} target='_blank' rel='noopener noreferrer'>Git repository</a>}
+        </div>
       </div>
     </div>
           )
@@ -87,7 +89,7 @@ const Work = (props)=>{
               {
                 return (
                   <div key={index} className="project">
-                    <img src={image} alt="work" />
+                    <img onClick={()=>window.open(image)} src={image} alt="work" />
                   </div>
                 )
               }
