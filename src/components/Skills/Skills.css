@@ -1,7 +1,4 @@
 .skills-list{
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 .skills-list > .list{
   margin: 1rem 2rem;
