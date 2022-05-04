@@ -27,6 +27,9 @@
     margin: 0;
     width: 100%;
   }
+  .skills-list > div{
+    width: 100%!important;
+  }
   .percentage{
     width: auto!important;
   }

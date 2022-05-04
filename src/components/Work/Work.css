@@ -151,8 +151,22 @@
     z-index: 1!important;
     position: relative!important;
   }
+  .work-detail p{
+    max-width: 320px!important;
+  }
+  .work-stack{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .work-stack .stack{
+    margin: .5rem 0;
+  }
   .slick-arrow{
     display: none!important;
+  }
+  .work_down{
+    flex-direction: column;
+    align-items: flex-start;
   }
   .modal-project{
     display: none;
