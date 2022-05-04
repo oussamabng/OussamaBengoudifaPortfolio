@@ -34,7 +34,7 @@ const Home = (props)=>{
       <div className="portfolio-description">
         <div><h2>{dataHome.fullname.split(" ")[1]}</h2> <span>{dataHome.fullname.split(" ")[0]}</span></div>
         <p>
-        I am an full-stack developer.
+        I am a full-stack developer.
         <br />
         And an automation engineer with python.
         <br />
