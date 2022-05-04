@@ -67,6 +67,18 @@
   font-size: 16px;
   font-family: 'Azo Sans Md';
 }
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons svg{
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem;
+  fill: var(--secondary-color);
+  cursor: pointer;
+}
 .personal .special-box > h2 > p{
   margin: 0;
 }

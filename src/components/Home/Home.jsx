@@ -3,8 +3,6 @@ import "./Home.css";
 import Typed from "react-typed";
 import ActionButton from "../ActionButton/ActionButton";
 
-
-
 const Home = (props)=>{
   const [textLines,setTextLines] = useState([])
   const { dataHome } = props;

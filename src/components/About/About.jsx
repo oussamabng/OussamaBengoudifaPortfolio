@@ -2,6 +2,11 @@ import "./About.css";
 import Shape from "../Shape/Shape";
 import ActionButton from "../ActionButton/ActionButton";
 
+import { ReactComponent as Instgram } from "../../assets/icons/insta.svg";
+import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
+import { ReactComponent as Github } from "../../assets/icons/github.svg";
+
+
 const About = (props)=>{
   const { dataAbout } = props;
   const date_of_birth = new Date(dataAbout.portfolio["date_of_birth"])
@@ -82,7 +87,20 @@ const About = (props)=>{
           </h2>
         </div>
       </div>
+      <div className="icons">
       <ActionButton isPdf pdf={dataAbout["portfolioCV"]}  content="DOWNLOAD MY CV" />
+      <div className="flex items-center mx-2">
+      <Instgram onClick={()=>{
+        window.open("https://www.instagram.com/swap4code/")
+      }} />
+      <Facebook onClick={()=>{
+        window.open("https://web.facebook.com/people/Bengoudifa-Oussama/100076240370356/")
+      }} />
+      <Github onClick={()=>{
+        window.open("https://github.com/oussamabng")
+      }} />
+      </div>
+      </div>
       <div className="mobile flex flex-col items-center">
         <div className="mr-2 special-box">
           <h6>{diff_years(new Date(),dev_start)} <div>+</div> </h6>
