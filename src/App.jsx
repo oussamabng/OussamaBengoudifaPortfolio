@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React,{useEffect,useState} from "react";
 import Home from "./components/Home/Home";
 import Logo from "./components/Logo/Logo";
@@ -9,16 +10,76 @@ import Education from "./components/Education/Education";
 import Work from "./components/Work/Work";
 import Message from "./components/Message/Message";
 
+import { db, storage,  getPortfolio, 
+  getPortfolioImage, getPortfolioCV, getSkills,
+  getProjects, getEducations,getExperiences   } from "./config"
 
 const App = ()=>{
+  const [dataHome,setDataHome] = useState({});
+  const [dataAbout,setDataAbout] = useState({});
+  const [dataSkills,setDataSkills] = useState({});
+  const [dataEducation,setDataEducation] = useState(null);
+  const [dataExperience,setDataExperience] = useState(null);
+  const [dataProjects,setDataProjects] = useState({});
+  const [dataMessage,setDataMessage] = useState({});
+
   const [activeItem,setActiveItem] = useState('home');
   const [logoClass,setLogoClass] = useState(false);
-  useEffect(() => {
-    setInterval(() => {
+  useEffect(async() => {
+    const portfolio = await getPortfolio(db);
+    const skills = await getSkills(db);
+    const projects = await getProjects(db);
+    const educations = await getEducations(db);
+    const experiences = await getExperiences(db);
+    const portfolioImage = await getPortfolioImage(storage);
+    const portfolioCV = await getPortfolioCV(storage);
+    await setInterval(() => {
       setLogoClass(true);
     }, 2000);
-  }, [logoClass]);
-  
+    
+    setDataHome(
+      {
+        "fullname":portfolio.fullname,
+        "job_titles":portfolio.job_titles,
+        "portfolioImage":portfolioImage,
+        "portfolioCV":portfolioCV,
+      }
+    );
+    setDataAbout(
+      {
+        "portfolio":portfolio,
+        "dev_start":portfolio["dev_start"],
+        "nb_projects":projects.length,
+        "portfolioCV":portfolioCV,
+      }
+    );
+    setDataSkills(
+        {
+          "skills":skills
+        }
+    );
+    setDataEducation({
+      "educations":educations
+    })
+    setDataExperience(
+      {
+        "experiences":experiences
+      }
+    );
+    setDataProjects(
+      {
+        "projects":projects
+      }
+    );
+    setDataMessage(
+      {
+        "adr":portfolio.adr,
+        "phone":portfolio.phone,
+        "email":portfolio.email
+      }
+    )
+    
+  }, []);
   return (
     <div className={logoClass?'portfolio move':'portfolio'}>
       <Logo setActiveItem={setActiveItem} animation={logoClass} />
@@ -41,13 +102,13 @@ const App = ()=>{
         <div className="mt-10 mw">
         <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
 
-          { activeItem === 'home' && <Home /> }
-          { activeItem === 'user' && <About /> }
-          { activeItem === 'user' && <Skills /> }
-          { activeItem === 'user' && <Education /> }
-          { activeItem === 'user' && <Education exp /> }
-          { activeItem === 'bag' && <Work /> }
-          { activeItem === 'mail' && <Message /> }
+          { activeItem === 'home' && <Home dataHome={dataHome} /> }
+          { activeItem === 'user' && <About dataAbout={dataAbout} /> }
+          { activeItem === 'user' && <Skills dataSkills={dataSkills} /> }
+          { activeItem === 'user' && <Education exp={false} dataEducation={dataEducation} /> }
+          { activeItem === 'user' && <Education dataExperience={dataExperience} exp /> }
+          { activeItem === 'bag' && <Work dataProjects={dataProjects} /> }
+          { activeItem === 'mail' && <Message dataMessage={dataMessage} /> }
         </div>
       </div>
       }

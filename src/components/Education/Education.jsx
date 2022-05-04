@@ -1,13 +1,18 @@
+import React,{useState,useEffect} from "react";
 import "../Skills/Skills.css";
 import Shape from "../Shape/Shape";
 import Certificate from "../Certificate/Certificate";
-import API from "../../API.json";
 
 const Education = (props)=>{
-  const { exp } = props;
-  const education_list = API["educations"]
-  const exp_list = API["experience"]
-  const data_chosen = exp ? exp_list : education_list;
+  const { exp,dataEducation,dataExperience } = props;
+  const [data,setData] = useState([]);
+
+  useEffect(()=>{
+    if (exp){
+      setData(dataExperience["experiences"])
+    } else setData(dataEducation["educations"]) 
+  },[])
+
   return (
     <div className="skills">
     <div style={{
@@ -30,36 +35,19 @@ const Education = (props)=>{
     </h1>
     </div>
     {
-      data_chosen.length>=2 
-      ? <div className="skills-list education">
-      <div>
-      {
-        data_chosen.slice(0,data_chosen.length/2).map(
-          (data)=>
-            <Certificate data={data} exp={exp} />
-        )
-      }
-      </div>
-      <div>
-      {
-        data_chosen.slice(data_chosen.length/2,data_chosen.length).map(
-          (data)=> 
-            <Certificate data={data} exp={exp} />
-        )
-      }
-      </div>
-    </div>
-    :
-    <div className="skills-list education">
+       <div className="skills-list education">
       
-      <div>
+      <div className="list">
       {
-        data_chosen.slice(data_chosen.length/2,data_chosen.length).map(
-          (data)=> 
+        data.map(
+          (data,index)=>
+          <div key={index} > 
             <Certificate data={data} exp={exp} />
+          </div>
         )
       }
       </div>
+      
     </div>
     }
   </div>

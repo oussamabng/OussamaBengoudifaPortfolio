@@ -1,12 +1,15 @@
+import React from "react"
 import "./Skills.css";
 import Shape from "../Shape/Shape";
 import PercentageBar from "../PercentageBar/PercentageBar";
-import API from "../../API.json";
 
-const Skills = ()=>{
-  const skill_list = API["skills"]
+const Skills = (props)=>{
+  const { dataSkills } = props;
   return (
-  <div className="skills">
+    <>
+    {
+      dataSkills.length > 0 &&
+      <div className="skills">
     <div style={{
       display:'flex',
       justifyContent:'center',
@@ -26,24 +29,27 @@ const Skills = ()=>{
     </h1>
     </div>
     <div className="skills-list">
-      <div>
+      
       {
-        skill_list.slice(0,skill_list.length/2).map(
-          (skill)=>
-            <PercentageBar id={skill.id} name={skill.name} percentage={skill.pourcentage*100} />
+        dataSkills.slice(0,dataSkills.length/2).map(
+          (skill,index)=>
+          <div key={index.toString()}>
+            <PercentageBar  name={skill.name} percentage={skill.pourcentage*100} />
+          </div>
         )
       }
-      </div>
-      <div>
       {
-        skill_list.slice(skill_list.length/2,skill_list.length).map(
-          (skill)=>
-            <PercentageBar id={skill.id} name={skill.name} percentage={skill.pourcentage*100} />
+        dataSkills.slice(dataSkills.length/2,dataSkills.length).map(
+          (skill,index)=>
+          <div key={index.toString()}>
+            <PercentageBar  name={skill.name} percentage={skill.pourcentage*100} />
+        </div>
         )
       }
-      </div>
     </div>
   </div>
+    }
+    </>
   );
 }
 

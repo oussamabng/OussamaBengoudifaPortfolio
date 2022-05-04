@@ -1,24 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Work.css";
-import React,{useState} from "react";
-import API from "../../API.json";
+import React,{useState,useEffect} from "react";
 
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-const Work = ()=>{
+const Work = (props)=>{
+  const { dataProjects } = props;
+  const [data,setData] = useState([]);
   const [activeItem,setActiveItem] = useState("all");
   const handleActiveItem = (e) =>{
     setActiveItem(e.currentTarget.attributes.data.value);
   }
+  useEffect(()=>{
+    setData(dataProjects["projects"])
+  },[])
   const settings = {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     cssEase: "linear"
   };
-  const work_list = API["projects"]
   const [isBlurred,setIsBlurred] = useState(false);
   const [images,setImages] = useState([])
 
@@ -28,8 +31,9 @@ const Work = ()=>{
   }
   return (
     <>
-    <div className={isBlurred?"about work blurred":"about work"} >
-      
+    {
+      data.length>0 &&
+      <div className={isBlurred?"about work blurred":"about work"} > 
       <div><h1>WORKS</h1><h3>MY<span>PORTFOLIO</span></h3></div>
       <div className="work-filter">
         <ul>
@@ -40,19 +44,19 @@ const Work = ()=>{
         </ul>
       </div>
       { 
-        work_list.filter((work)=>
+        data.filter((work)=>
           activeItem === "all" ? work : work.type === activeItem
-        ).map(work=>
-      <div className="work-platform" onClick={()=>showProject({images:work.images,name:work.name})} >
-      <img  src={require('../../assets/'+work.images[0])} alt="work" />
+        ).map((work,index)=>
+      <div key={index} className="work-platform" onClick={()=>showProject({images:work.images,name:work.name})} >
+      <img  src={work.images[0]} alt="work" />
       <div className="work-detail">
         <h1>{work.name}</h1>
         <p> {work.description} </p>
         <span>USED STACK :</span>
         <div className="work-stack">
           {
-            work.stacks.map(stack=>
-              <div className="stack">
+            work.stacks.map((stack,index)=>
+              <div key={index} className="stack">
                 {stack}
               </div>
               )
@@ -65,6 +69,7 @@ const Work = ()=>{
           )
       }
     </div>
+    }
 
     {
       isBlurred && 
@@ -78,11 +83,11 @@ const Work = ()=>{
         </div>
         <Slider {...settings}>
           {
-            images.images.map((image)=>
+            images.images.map((image,index)=>
               {
                 return (
-                  <div className="project">
-                    <img src={require('../../assets/'+image)} alt="work" />
+                  <div key={index} className="project">
+                    <img src={image} alt="work" />
                   </div>
                 )
               }

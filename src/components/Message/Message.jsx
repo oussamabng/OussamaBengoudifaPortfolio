@@ -7,11 +7,11 @@ import { ReactComponent as Mail } from "../../assets/icons/mail2.svg";
 
 import ActionButton from "../ActionButton/ActionButton";
 import emailjs from 'emailjs-com';
-import API from "../../API.json";
 
 import "./Message.css";
 
-const Message = ()=>{
+const Message = (props)=>{
+  const { dataMessage } = props;
   const SERVICE_ID = "service_esy496d";
   const TEMPLATE_ID = "template_5nqo98j";
   const USER_ID = "yruBn2FpQMC5U56by";
@@ -152,9 +152,9 @@ const Message = ()=>{
           </p>
           <div className="flex flex-col">
             
-          <span> <Adr /> {API["portfolio"]["adr"]} </span>
-          <span> <Phone /> {API["phone"]} </span>
-          <span> <Mail /> {API["email"]} </span>
+          <span> <Adr /> {dataMessage["adr"]} </span>
+          <span> <Phone /> {dataMessage["phone"]} </span>
+          <span> <Mail /> {dataMessage["email"]} </span>
           </div>
         </div>
         <div className="message-form">
