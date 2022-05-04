@@ -15,7 +15,7 @@ const Work = (props)=>{
   }
   useEffect(()=>{
     setData(dataProjects["projects"])
-  },[])
+  },[]) // eslint-disable-line react-hooks/exhaustive-deps
   const settings = {
     infinite: true,
     slidesToShow: 1,
