@@ -26,7 +26,7 @@ const Certificate = (props)=>{
          <h1> {data.name}    { !exp && <span> {`${data.type.length>0?(`(${data.type})`):''}`} </span> }  </h1>
        </div>
        <div className="certificate-place">
-         <span>{exp?data.place:data.place}</span>
+         <span>{exp?data.work_type:data.place}</span>
        </div>
        <div className="certificate-desc">
          <p>{data.description}</p>
