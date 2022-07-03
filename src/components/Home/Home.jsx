@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import "./Home.css";
 import Typed from "react-typed";
 import ActionButton from "../ActionButton/ActionButton";
+import { Image } from "react-image-and-background-image-fade";
 
 const Home = (props)=>{
   const [textLines,setTextLines] = useState([])
@@ -17,7 +18,7 @@ const Home = (props)=>{
       <div className="portfolio-image mx-4">  
         <div className="flex flex-col items-center">
           <div className="border2"></div>
-          <img src={dataHome.portfolioImage} alt={dataHome.fullname} />
+          <Image wrapperClassName="img-home" src={dataHome.portfolioImage} alt={dataHome.fullname} />
           <pre>
           <span>
           [</span>         

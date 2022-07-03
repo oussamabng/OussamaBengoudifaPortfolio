@@ -174,3 +174,6 @@
     filter: blur(0px) opacity(100%);
   }
 }
+.work-img{
+  min-width: 300px;
+}

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Work.css";
 import React,{useState,useEffect} from "react";
-
+import { Image } from "react-image-and-background-image-fade";
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -48,7 +48,7 @@ const Work = (props)=>{
           activeItem === "all" ? work : work.type === activeItem
         ).map((work,index)=>
       <div key={index} className="work-platform"  >
-      <img  src={work.images[0]} onClick={()=>showProject({images:work.images,name:work.name})} alt="work" />
+      <Image wrapperClassName="work-img" src={work.images[0]} width="300px" height="100%" onClick={()=>showProject({images:work.images,name:work.name})} alt="work"  />
       <div className="work-detail">
         <h1 onClick={()=>showProject({images:work.images,name:work.name})} >{work.name}</h1>
         <p> {work.description} </p>

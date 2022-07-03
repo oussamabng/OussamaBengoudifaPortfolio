@@ -5,12 +5,15 @@
   position: relative;
   z-index: 600;
 }
-.homepage img{
+.img-home{
+  min-width: 230px;
+  min-height: 320px;
+}
+.img-home img{
   width: 230px;
   height: 320px;
-  border-radius: 5px;
-  padding: 1rem;
 }
+
 .portfolio-image > div{
   padding: 4rem 1.5rem;
   border: 1px solid var(--secondary-color);
